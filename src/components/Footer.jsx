@@ -63,10 +63,9 @@ export default function Footer() {
         </div>
       </div>
       <hr className='border border-[#0A142F] w-[100px] mb-2 mt-10 mx-auto' />
-      <p className='text-center text-[#0A142F]'>
+      <p className='text-center text-[#0A142F] mb-6'>
         © 2023 THE FACTORY. All Rights Reserved
       </p>
-      <hr className='border border-[#0A142F] w-[100px] mb-4 mt-2 mx-auto' />
     </footer>
   );
 }
