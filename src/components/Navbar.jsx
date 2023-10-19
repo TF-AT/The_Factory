@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { XMarkIcon, Bars3BottomRightIcon } from "../assets/icons";
+import menu from "../assets/menu.png";
+import close from "../assets/close.png";
 
 export default function Navbar() {
   const [toggleMobileNav, setToggleMobileNav] = useState(false);
@@ -32,20 +34,22 @@ export default function Navbar() {
           Contact Us
         </a>
       </div>
-      <nav className='flex md:hidden relative justify-between items-center px-2 pt-4'>
+      <nav className='flex md:hidden relative items-center justify-between px-2 pt-4 pb-2 border-b-2 border-black'>
         <p>THE FACTORY</p>
         <div>
           {toggleMobileNav ? (
             <span onClick={handleToggle}>
-              <XMarkIcon />
+              {/* <XMarkIcon /> */}
+              <img src={close} alt='' className='w-6' />
             </span>
           ) : (
-            <span>
-              <Bars3BottomRightIcon />
+            <span onClick={handleToggle}>
+              {/* <Bars3BottomRightIcon /> */}
+              <img src={menu} alt='' className='w-6' />
             </span>
           )}
           {toggleMobileNav && (
-            <ul className='abosulute'>
+            <ul className='absolute top-10 left-0 right-0 p-4 flex flex-col gap-3 w-full bg-white z-10 items-center border-b-2 border-black '>
               <li>
                 <a href='/'>Home</a>
               </li>
